@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eddy Patrick - Profile Card</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <article class="profile-card" data-testid="test-profile-card">
+        <header class="card-header">
+            <h1 data-testid="test-user-name">Eddy Patrick</h1>
+            <p>Frontend Developer & UI/UX Enthusiast</p>
+        </header>
+        
+        <div class="card-body">
+            <section class="avatar-section">
+                <figure>
+                    <div class="avatar-container">
+                        <img 
+                            src="IMG_20251018_071510_959.jpg" 
+                            alt="Profile photo of Eddy Patrick" 
+                            class="avatar"
+                            data-testid="test-user-avatar">
+                    </div>
+                    <figcaption class="sr-only">Profile photo of Eddy Patrick</figcaption>
+                </figure>
+                
+                <div class="avatar-upload">
+                    <label for="avatar-upload" class="sr-only">Upload new profile picture</label>
+                    <input type="file" id="avatar-upload" accept="image/*">
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <div class="bio-section">
+                    <p data-testid="test-user-bio">
+                        As a creative problem-solver and UI/UX enthusiast, I'm drawn to front-end development because i love
+                        building interactive and dynamic web experiences that prioritize user needs.
+                        I'm Eddy Patrick, and i'm thrilled to be part of HNG.
+                    </p>
+                </div>
+                
+                <div class="time-section">
+                    <span>Current time (ms): </span>
+                    <span data-testid="test-user-time" id="current-time">0</span>
+                </div>
+                
+                <div class="lists-section">
+                    <div class="list-container">
+                        <h3>Hobbies</h3>
+                        <ul data-testid="test-user-hobbies">
+                            <li>Swimming</li>
+                            <li>Nature Walks</li>
+                            <li>Playing Guitar</li>
+                            <li>Reading Sci-Fi Novels</li>
+                            <li>3D Printing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="list-container">
+                        <h3>Dislikes</h3>
+                        <ul data-testid="test-user-dislikes">
+                            <li>Parties</li>
+                            <li>Traffic jams</li>
+                            <li>Loud chewing noises</li>
+                            <li>Early morning alarms</li>
+                            <li>Slow internet connections</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <nav aria-label="Social media links">
+                    <ul class="social-links" data-testid="test-user-social-links">
+                        <a 
+                            href="https://x.com/Tech_DemonGod?t=bfeTT8XxzwK3vRbfd_D2sg&s=09" 
+                            class="social-link twitter"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-twitter"
+                            aria-label="Visit my Twitter profile">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+
+                        <a 
+                            href="https://github.com/Eddypat" 
+                            class="social-link github"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-github"
+                            aria-label="Visit my GitHub profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a 
+                            href="https://www.linkedin.com/in/eddy-patrick?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                            class="social-link linkedin"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-linkedin"
+                            aria-label="Visit my LinkedIn profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a 
+                            href="https://www.instagram.com/eddypatrick58?igsh=YzljYTk1ODg3Zg==" 
+                            class="social-link instagram"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-instagram"
+                            aria-label="Visit my Instagram profile">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </article>
+
+    <script>
+        // Update the current time in milliseconds
+        function updateTime() {
+            const timeElement = document.querySelector('[data-testid="test-user-time"]');
+            if (timeElement) {
+                timeElement.textContent = Date.now();
+            }
+        }
+        
+        // Initialize time and update every second
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // Handle avatar upload
+        const avatarUpload = document.getElementById('avatar-upload');
+        const avatarImage = document.querySelector('[data-testid="test-user-avatar"]');
+        
+        avatarUpload.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    avatarImage.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
