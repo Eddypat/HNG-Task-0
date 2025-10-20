@@ -1,65 +1,161 @@
 # HNG-Task-0
 
-Profile Card Component 🎯
-A responsive, accessible profile card built with semantic HTML, modern CSS, and vanilla JavaScript. This project demonstrates frontend best practices including accessibility, responsive design, and testable elements.
+🚀 Stage 1 Updates - About & Contact Pages
+I've successfully extended the Profile Card into a complete multi-page application with two new pages as required for Stage 1!
 
+🆕 New Features Added
+1. Multi-Page Navigation System
+Navigation Bar with Home, About, and Contact links
 
-✨ Features
-🎨 Responsive Design - Works perfectly on mobile, tablet, and desktop
+Single-Page Application functionality using vanilla JavaScript
 
-♿ Accessibility First - Semantic HTML, ARIA labels, keyboard navigation
+Active state highlighting for current page
 
-🧪 Testable Elements - All components include data-testid attributes for automated testing
+Smooth transitions between pages
 
-🕒 Live Time Display - Real-time milliseconds counter
+2. 📞 Contact Page (/contact)
+Form with Complete Validation:
 
-📸 Avatar Upload - Dynamic profile picture upload functionality
+html
 
-🔗 Social Media Integration - Platform-specific icons with proper branding
+✅ All fields required
 
-🎯 Modern CSS - Flexbox, CSS Grid, CSS Variables, and smooth animations
+✅ Email format validation (name@example.com)
 
-🚀 Live Demo
-Check out the live demo: Live Demo Link
+✅ Message minimum length (10 characters)
 
-📋 Project Requirements Met
-Required Data-Testid Attributes
-✅ test-profile-card - Root container
+✅ Real-time validation on blur
 
-✅ test-user-name - User's name
+✅ Error messages with proper ARIA attributes
 
-✅ test-user-bio - Biography paragraph
+✅ Success message after valid submission
 
-✅ test-user-time - Current time in milliseconds (updates every second)
+✅ Form reset after successful submission
 
-✅ test-user-avatar - Profile image with upload functionality
+Accessibility:
 
-✅ test-user-social-links - Container for social links
+♿ All inputs have proper <label> with for attributes
 
-✅ test-user-social-<network> - Individual social links (Twitter, GitHub, LinkedIn, Instagram)
+♿ Error messages linked with aria-describedby
 
-✅ test-user-hobbies - Hobbies list
+♿ Keyboard navigable form
 
-✅ test-user-dislikes - Dislikes list
+♿ Clear focus indicators
 
-Semantic HTML Structure
-✅ <article> for main profile card
+3. 👤 About Page (/about)
 
-✅ <header> for card header section
+Content Structure:
 
-✅ <section> for content areas
+Bio Section: Personal journey and background
 
-✅ <figure> and <figcaption> for avatar
+Goals: Specific objectives for the Frontend Wizards program
 
-✅ <nav> for social links
+Low Confidence Areas: Honest reflection on growth areas
 
-✅ Proper heading hierarchy
+Future Note: Motivational message to future self
 
-🛠️ Technologies Used
-HTML5 - Semantic markup
+Extra Thoughts: Additional insights and philosophy
 
-CSS3 - Modern styling with Flexbox, CSS Variables, and Media Queries
+4. 🔄 Preserved Stage 0 Features
+✅ All original Profile Card functionality maintained
 
-Vanilla JavaScript - Dynamic functionality without frameworks
+✅ Live time counter (milliseconds)
 
-Font Awesome - Social media icons
+✅ Avatar upload feature
+
+✅ Social media links with proper icons
+
+✅ Responsive design for all screen sizes
+
+✅ All original data-testid attributes preserved
+
+🧪 Testing Ready
+All required data-testid attributes are implemented:
+
+Contact Page: 11 testable elements
+
+About Page: 6 testable sections
+
+Navigation: 2 testable elements
+
+Profile Card: All original 8+ testable elements
+
+🎯 Technical Implementation
+No Frameworks Used:
+
+Pure HTML5, CSS3, and Vanilla JavaScript
+
+CSS Grid and Flexbox for layouts
+
+CSS Custom Properties (variables) for theming
+
+Mobile-first responsive design
+
+JavaScript Features:
+
+Page routing without page reloads
+
+Form validation with real-time feedback
+
+Dynamic error message display
+
+Success state management
+
+📱 Responsive Design
+Breakpoints:
+
+Mobile: < 576px (stacked layout)
+
+Tablet: 576px - 767px
+
+Desktop: ≥ 768px (side-by-side layouts)
+
+♿ Accessibility Compliance
+Semantic HTML throughout (main, section, nav, article)
+
+ARIA labels and descriptions
+
+Keyboard navigation support
+
+Screen reader compatible
+
+Color contrast compliance
+
+🔄 How to Use the Updated Application
+Navigation: Use the top navigation bar to switch between Home, About, and Contact pages
+
+Contact Form: Fill out all required fields with valid data to see success message
+
+Form Validation: Try submitting with empty fields to see error messages
+
+Responsive Testing: Resize browser or view on different devices
+
+📋 Acceptance Criteria Checklist
+Contact Page ✅
+All required fields with correct data-testids
+
+Validation prevents invalid submissions
+
+Success message shows after valid submission
+
+Accessible form with labels and ARIA attributes
+
+About Page ✅
+All required sections with correct data-testids
+
+Semantic HTML structure
+
+Proper heading hierarchy
+
+Reflective content in each section
+
+General ✅
+Semantic HTML throughout
+
+Fully accessible
+
+Responsive across all devices
+
+Keyboard navigable
+
+Clean, readable code
